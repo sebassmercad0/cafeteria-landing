@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,10 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+
+    <input type="checkbox" id="themeToggle" class="theme-checkbox">
+
+   
     <header class="navbar">
         <div class="logo">☕ Aroma & Grano</div>
         <nav class="nav-links">
@@ -17,13 +20,13 @@
             <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </nav>
-        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <label for="themeToggle" class="theme-toggle-label" aria-label="Cambiar tema">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
-        </button>
+        </label>
     </header>
 
-    <!-- BANNER HERO -->
+    
     <section class="banner">
         <div class="banner-content">
             <span class="banner-tag">Desde 2015 · Bogotá, Colombia</span>
@@ -41,7 +44,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN MENÚ -->
+    
     <main id="menu">
         <div class="section-header">
             <span class="section-tag">Lo que ofrecemos</span>
@@ -90,7 +93,89 @@
         </div>
     </main>
 
-    <!-- SECCIÓN NOSOTROS -->
+   
+    <section id="proceso" class="process-section">
+        <div class="section-header">
+            <span class="section-tag">Nuestra promesa</span>
+            <h2>Del grano a tu taza</h2>
+            <p>Cada sorbo es el resultado de un proceso cuidadoso y artesanal</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-icon">🌱</div>
+                <div class="step-number">01</div>
+                <h3>Cultivo</h3>
+                <p>Seleccionamos granos de familias caficultoras del Huila y Nariño, a más de 1.800 metros de altitud.</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-icon">🫘</div>
+                <div class="step-number">02</div>
+                <h3>Selección</h3>
+                <p>Revisamos grano a grano para garantizar uniformidad, descartando cualquier imperfección.</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-icon">🔥</div>
+                <div class="step-number">03</div>
+                <h3>Tostado</h3>
+                <p>Nuestro maestro tostador trabaja lotes pequeños con perfiles de temperatura precisos para cada origen.</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-icon">☕</div>
+                <div class="step-number">04</div>
+                <h3>Tu taza</h3>
+                <p>En 48 horas después del tostado, el café llega a nuestras máquinas listo para sorprenderte.</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="testimonios" class="testimonials-section">
+        <div class="section-header">
+            <span class="section-tag">Lo que dicen</span>
+            <h2>Nuestros clientes hablan</h2>
+            <p>Más de 8 años creando momentos especiales</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"El mejor cappuccino de Bogotá, sin discusión. El arte latte es increíble y el sabor no tiene comparación. Ya llevo 3 años siendo cliente fiel."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MP</div>
+                    <div class="author-info">
+                        <strong>María Paula R.</strong>
+                        <span>Chapinero · Cliente desde 2021</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card featured-testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Vengo cada mañana antes del trabajo. El cold brew me tiene completamente enganchado. Saber que apoyamos a familias caficultoras colombianas le da otro sabor."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JC</div>
+                    <div class="author-info">
+                        <strong>Julián Cardona</strong>
+                        <span>Usaquén · Cliente desde 2019</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"El combo desayuno es perfecto. El croissant siempre está recién salido del horno y el espresso es intenso justo como me gusta. ¡Mi lugar favorito!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SV</div>
+                    <div class="author-info">
+                        <strong>Sofía Vargas</strong>
+                        <span>La Candelaria · Cliente desde 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <section id="nosotros" class="about-section">
         <div class="about-content">
             <span class="section-tag">Nuestra historia</span>
@@ -105,7 +190,7 @@
         </div>
     </section>
 
-    <!-- FOOTER / CONTACTO -->
+    
     <footer id="contacto">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -128,11 +213,26 @@
                     <a href="#">WhatsApp</a>
                 </div>
             </div>
+            <div class="footer-newsletter">
+                <h4>Novedades &amp; Promociones</h4>
+                <p>Entérate primero de nuestros nuevos granos y eventos especiales.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="tu@correo.com" class="newsletter-input" />
+                    <button class="newsletter-btn" type="button">Suscribirme</button>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Aroma & Grano. Hecho con ☕ y amor en Colombia.</p>
+            <p>© 2025 Aroma &amp; Grano. Hecho con ☕ y amor en Colombia.</p>
         </div>
     </footer>
+
+   
+    <a href="https://wa.me/573001234567?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20Aroma%20%26%20Grano%20%E2%98%95"
+       class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-label">¿Preguntas?</span>
+    </a>
 
 </body>
 </html>
